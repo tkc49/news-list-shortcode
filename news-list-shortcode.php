@@ -129,6 +129,9 @@ class NewsListShortCode {
 			$news_list_shortcode_list_after = apply_filters( 'news_list_shortcode_list_after', '</ul>');
 			$html .= $news_list_shortcode_list_after;
 
+			$news_list_shortcode_archive_link =  apply_filters( 'news_list_shortcode_archive_link', '<a href="%archive_link%" class="newsList_archiveLink">'.__( 'News List' ).'</a>' );
+			$news_list_shortcode_archive_link = str_replace('%archive_link%', esc_url( get_post_type_archive_link( $this->post_type ) ), $news_list_shortcode_archive_link );
+			$html .= $news_list_shortcode_archive_link;
 
 			wp_reset_postdata();
 		
