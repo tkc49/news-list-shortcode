@@ -94,9 +94,11 @@ class NewsListShortCode {
 			while ( $the_query->have_posts() ) {
 				$the_query->the_post();
 
+				// datetime
 				$datetime = date_i18n( 'Y/m/d', strtotime( get_the_time('Y/m/d') ) );
 				$datetime_disp = date_i18n( get_option( 'date_format' ), strtotime( get_the_time('Y/m/d') ) );
 
+				// term
 				$term_name_join = "";
 				$terms = get_the_terms( $the_query->post, $this->taxonomy );
 				if ( $terms && ! is_wp_error( $terms ) ) {
@@ -112,6 +114,8 @@ class NewsListShortCode {
 					$term_name_join = $news_list_shortcode_term_before . join( $news_list_shortcode_term_after.$news_list_shortcode_term_before , $term_name ).$news_list_shortcode_term_after;
 				}
 
+
+				// list
 				$news_list_shortcode_list_item = apply_filters( 'news_list_shortcode_list_item', '<li class="newsList_item"><time class="newsList_item_date" datetime="%date_time%">%post_date%</time>%post_category%<a class="newsList_item_link" href="%link%" title="%link_title%">%post_title%</a></li>' );				
 
 			    
@@ -129,6 +133,7 @@ class NewsListShortCode {
 			$news_list_shortcode_list_after = apply_filters( 'news_list_shortcode_list_after', '</ul>');
 			$html .= $news_list_shortcode_list_after;
 
+			// Archve List
 			$news_list_shortcode_archive_link =  apply_filters( 'news_list_shortcode_archive_link', '<a href="%archive_link%" class="newsList_archiveLink">'.__( 'News List' ).'</a>' );
 			$news_list_shortcode_archive_link = str_replace('%archive_link%', esc_url( get_post_type_archive_link( $this->post_type ) ), $news_list_shortcode_archive_link );
 			$html .= $news_list_shortcode_archive_link;
@@ -136,6 +141,8 @@ class NewsListShortCode {
 			wp_reset_postdata();
 		
 		}else{
+
+			// Not Fund.
 			$html =	"<p>"._e( 'Sorry, There is no news.' )."</p>";
 		}
 
@@ -168,8 +175,8 @@ class NewsListShortCode {
 			'all_items'          => __( 'All News', 'news-list-shortcode' ),
 			'search_items'       => __( 'Search News', 'news-list-shortcode' ),
 			'parent_item_colon'  => __( 'Parent News:', 'news-list-shortcode' ),
-			'not_found'          => __( 'No books found.', 'news-list-shortcode' ),
-			'not_found_in_trash' => __( 'No books found in Trash.', 'news-list-shortcode' )
+			'not_found'          => __( 'No News found.', 'news-list-shortcode' ),
+			'not_found_in_trash' => __( 'No News found in Trash.', 'news-list-shortcode' )
 		);
 		
 		$args = array(
@@ -184,7 +191,7 @@ class NewsListShortCode {
 			'has_archive'        	=> true,
 			'hierarchical'       	=> false,
 			'menu_position'      	=> null,
-			'supports'				=> array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'revisions' ),
+			'supports'				=> array( 'title', 'editor', 'author', 'revisions' ),
 		);
 		
 		register_post_type( 
