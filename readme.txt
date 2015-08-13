@@ -1,4 +1,4 @@
-=== News List ShortCode ===
+I=== News List ShortCode ===
 Contributors: Takashi Hosoya
 Tags: post list, shortcode, news
 Requires at least: 1.0
@@ -61,7 +61,10 @@ OR
 
 
 == Screenshots ==
-
+1. Add menu custom post type 'news'
+2. Add Taxonomy 'news_genre'
+3. Shortcode
+4. Display News List
 
 
 == Changelog ==
