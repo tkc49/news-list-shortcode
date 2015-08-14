@@ -1,4 +1,4 @@
-I=== News List ShortCode ===
+=== News List ShortCode ===
 Contributors: Takashi Hosoya
 Tags: post list, shortcode, news
 Requires at least: 1.0
