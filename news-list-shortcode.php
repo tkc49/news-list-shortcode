@@ -4,7 +4,7 @@ Plugin Name: News List ShortCode
 Author: Takashi Hosoya
 Plugin URI: https://github.com/tkc49/news-list-shorcode
 Description: News List ShortCode can display a list of news
-Version: 1.0.0
+Version: 1.0.2
 Author URI: http://ht79.info/
 Domain Path: /languages
 Text Domain: news-list-shortcode

@@ -1,7 +1,9 @@
 === News List ShortCode ===
-Contributors: Takashi Hosoya
+Contributors: tkc49
 Tags: post list, shortcode, news
-Requires at least: 1.0
+Requires at least: 1.0.2
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 
 This plugin will display a list of the announcement in the shortcode.
@@ -10,7 +12,9 @@ This plugin will display a list of the announcement in the shortcode.
 
 This plugin will display a list of the announcement in the shortcode.
 
-`[newslist count=number]` or `[newslist]`
+`[newslist count=number]` 
+or 
+`[newslist]`
 
 
 [This plugin is maintained on GitHub.](https://github.com/tkc49/news-list-shorcode)
@@ -41,6 +45,10 @@ Please contact me.
 
 * [Takashi Hosoya](http://ht79.info/)
 
+Thanks
+Cover banner designed by [akari_doi](https://profiles.wordpress.org/akari_doi/)
+
+
 
 == Installation ==
 
@@ -57,7 +65,9 @@ OR
 
 *Usage*
 
-`[newslist count=number]` or `[newslist]`
+`[newslist count=number]` 
+or 
+`[newslist]`
 
 
 == Screenshots ==
