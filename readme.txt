@@ -1,7 +1,9 @@
 === News List ShortCode ===
 Contributors: tkc49
 Tags: post list, shortcode, news
-Requires at least: 1.0.2
+Requires at least: 4.9
+Tested up to: 4.9
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,8 +14,8 @@ This plugin will display a list of the announcement in the shortcode.
 
 This plugin will display a list of the announcement in the shortcode.
 
-`[newslist count=number]` 
-or 
+`[newslist count=number]`
+or
 `[newslist]`
 
 
@@ -65,8 +67,8 @@ OR
 
 *Usage*
 
-`[newslist count=number]` 
-or 
+`[newslist count=number]`
+or
 `[newslist]`
 
 
@@ -78,6 +80,12 @@ or
 
 
 == Changelog ==
+
+= 1.1.1 =
+* Test
+
+= 1.1.0 =
+* Add Custom Event Date
 
 = 1.0.0 =
 * The first release.
